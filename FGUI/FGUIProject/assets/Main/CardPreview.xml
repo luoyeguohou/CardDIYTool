@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="112,201" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="2"/>
+  <displayList>
+    <graph id="n66_8xna" name="n66" xy="1,0" size="110,155" type="rect">
+      <gearDisplay controller="button" pages="1,2,3"/>
+    </graph>
+    <component id="n64_8xna" name="card" src="ivra3" fileName="Card.xml" xy="3,3" size="650,900" scale="0.164,0.164"/>
+    <component id="n65_8xna" name="btnSetCardField" src="ivra2" fileName="Button.xml" xy="0,156" size="112,40">
+      <Button title="fire" titleFontSize="12"/>
+    </component>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

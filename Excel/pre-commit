@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git commit" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-commit".
+
+
+CHANGED_FILES=$(git diff --name-only --cached)
+EXCEL_CHANGED=false
+WITHJSON_COMMIT=false
+
+for file in ${CHANGED_FILES}; do
+    case "$file" in
+        *.xlsx) EXCEL_CHANGED=true;;
+        *.json) WITHJSON_COMMIT=true;;
+    esac
+done
+
+if [ "$EXCEL_CHANGED" == true ]; then
+    if [ "$WITHJSON_COMMIT" == false ]; then
+        echo "xlsx changed must commit with design.json"
+        echo "excel 改变必须重新生成json提交 "
+        exit 1
+    fi
+fi

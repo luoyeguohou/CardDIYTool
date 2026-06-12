@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" bgColor="#999999">
+  <displayList>
+    <image id="n11_ptwp" name="n11" src="ptwpc" fileName="unnamed.jpg" xy="0,0" size="1920,1080" filter="color" filterData="0,-0.55,0,0"/>
+    <graph id="n12_ptwp" name="n12" xy="98,66" size="1460,468" type="rect" fillColor="#5cffffff" corner="15"/>
+    <graph id="n13_ptwp" name="n13" xy="93,560" size="1768,468" type="rect" fillColor="#5cffffff" corner="15"/>
+    <text id="n14_ptwp" name="n14" xy="109,910" size="134,96" fontSize="39" align="center" vAlign="middle" autoSize="none" text="股价："/>
+    <text id="n15_ptwp" name="n15" xy="406,911" size="134,96" fontSize="32" align="center" vAlign="middle" autoSize="none" text="人气值："/>
+    <text id="n16_ptwp" name="n16" xy="700,913" size="134,96" fontSize="39" align="center" vAlign="middle" autoSize="none" text="金币："/>
+    <text id="n17_ptwp" name="n17" xy="1001,916" size="134,96" fontSize="39" align="center" vAlign="middle" autoSize="none" text="木头："/>
+    <text id="n18_ptwp" name="n18" xy="1264,914" size="134,96" fontSize="39" align="center" vAlign="middle" autoSize="none" text="石头："/>
+    <text id="n21_ptwp" name="n21" xy="1558,911" size="134,96" fontSize="39" align="center" vAlign="middle" autoSize="none" text="营销："/>
+    <text id="n22_ptwp" name="n22" xy="1560,804" size="134,96" fontSize="39" align="center" vAlign="middle" autoSize="none" text="收入："/>
+    <text id="n23_ptwp" name="n23" xy="1172,104" size="134,96" fontSize="39" align="center" vAlign="middle" autoSize="none" text="股价："/>
+    <text id="n24_ptwp" name="n24" xy="1173,216" size="134,96" fontSize="39" align="center" vAlign="middle" autoSize="none" text="人气："/>
+    <text id="n25_ptwp" name="n25" xy="1177,326" size="134,96" fontSize="39" align="center" vAlign="middle" autoSize="none" text="金币："/>
+    <text id="n26_ptwp" name="n26" xy="1180,428" size="134,96" fontSize="39" align="center" vAlign="middle" autoSize="none" text="差评："/>
+  </displayList>
+</component>

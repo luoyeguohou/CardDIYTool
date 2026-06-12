@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<!-- ddb file path -->
+	<ddb>./design.db</ddb>
+	<!-- output json file path -->
+	<output>./design.json</output>
+	<!-- encode pretty for read -->
+	<EnablePretty>1</EnablePretty>
+
+	<tables>
+		<table name="macros_text">id,name,str,info</table>
+	</tables>
+
+</config>

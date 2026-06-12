@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <controller name="currImage" pages="0,,1," selected="0"/>
+  <displayList>
+    <graph id="n29_8xna" name="n29" xy="53,374" size="704,152" type="rect" fillColor="#ff999999"/>
+    <graph id="n36_8xna" name="n36" xy="66,771" size="929,296" type="rect" fillColor="#ff999999"/>
+    <graph id="n1_ivra" name="n1" xy="211,224" size="516,56" type="rect"/>
+    <graph id="n68_8xna" name="n68" xy="73,396" size="119,56" type="rect" fillColor="#ffcccccc"/>
+    <text id="n2_ivra" name="n2" xy="46,222" size="166,67" fontSize="25" vAlign="middle" autoSize="none" text="导出路径："/>
+    <text id="n3_ivra" name="txtExport" xy="211,227" size="518,52" fontSize="25" vAlign="middle" autoSize="shrink" text="C://Programx86/test/shdjsakgfksagkfasgfs"/>
+    <component id="n5_ivra" name="btnAddImage" src="ivra2" fileName="Button.xml" xy="470,402" size="118,40">
+      <Button title="增加图片" titleFontSize="25"/>
+    </component>
+    <component id="n6_ivra" name="btnAddText" src="ivra2" fileName="Button.xml" xy="471,459" size="118,40">
+      <Button title="增加文本" titleFontSize="25"/>
+    </component>
+    <component id="n17_ivra" name="card" src="ivra3" fileName="Card.xml" xy="1125,19" size="600,960"/>
+    <component id="n18_ivra" name="btnLayerUp" src="ivra2" fileName="Button.xml" xy="642,783" size="144,40">
+      <Button title="层级向上" titleFontSize="25"/>
+    </component>
+    <component id="n19_ivra" name="btnLayerDown" src="ivra2" fileName="Button.xml" xy="799,783" size="144,40">
+      <Button title="层级向下" titleFontSize="25"/>
+    </component>
+    <graph id="n20_8xna" name="n20" xy="213,166" size="516,56" type="rect"/>
+    <text id="n21_8xna" name="n21" xy="46,161" size="166,67" fontSize="25" vAlign="middle" autoSize="none" text="文件夹路径："/>
+    <text id="n22_8xna" name="txtCurrFolder" xy="213,169" size="518,52" fontSize="25" vAlign="middle" autoSize="shrink" text="C://Programx86/test/shdjsakgfksagkfasgfs"/>
+    <component id="n26_8xna" name="btnChooseJson" src="ivra2" fileName="Button.xml" xy="59,108" size="144,40">
+      <Button title="选择json" titleFontSize="25"/>
+    </component>
+    <text id="n27_8xna" name="txtJson" xy="209,104" size="518,52" fontSize="25" vAlign="middle" autoSize="shrink" text="C://Programx86/test/shdjsakgfksagkfasgfs"/>
+    <component id="n28_8xna" name="btnDraw" src="ivra2" fileName="Button.xml" xy="247,290" size="365,68">
+      <Button title="开始绘制" titleFontSize="42"/>
+    </component>
+    <component id="n30_8xna" name="btnSetSize" src="ivra2" fileName="Button.xml" xy="325,403" size="123,40">
+      <Button title="设置尺寸" titleFontSize="25"/>
+    </component>
+    <graph id="n31_8xna" name="n31" xy="73,455" size="241,56" type="rect" fillColor="#ffcccccc"/>
+    <text id="n33_8xna" name="txtSizeWidth" xy="77,400" size="110,45" fontSize="25" align="center" vAlign="middle" autoSize="none" text="960" input="true"/>
+    <graph id="n34_8xna" name="n34" xy="199,397" size="119,56" type="rect" fillColor="#ffcccccc"/>
+    <text id="n35_8xna" name="txtSizeHeight" xy="204,402" size="110,45" fontSize="25" align="center" vAlign="middle" autoSize="none" text="960" input="true"/>
+    <graph id="n37_8xna" name="n37" xy="109,791" size="166,56" type="rect" fillColor="#ffcccccc"/>
+    <text id="n38_8xna" name="txtField" xy="114,797" size="157,45" fontSize="25" align="center" vAlign="middle" autoSize="none" text="test" input="true"/>
+    <component id="n39_8xna" name="btnSetField" src="ivra2" fileName="Button.xml" xy="286,801" size="144,40">
+      <Button title="设置字段" titleFontSize="25"/>
+    </component>
+    <graph id="n40_8xna" name="n40" xy="109,864" size="119,56" type="rect" fillColor="#ffcccccc"/>
+    <text id="n41_8xna" name="txtCompPosX" xy="114,870" size="110,45" fontSize="25" align="center" vAlign="middle" autoSize="none" text="960" input="true"/>
+    <graph id="n42_8xna" name="n42" xy="239,865" size="119,56" type="rect" fillColor="#ffcccccc"/>
+    <text id="n43_8xna" name="txtCompPosY" xy="244,871" size="110,45" fontSize="25" align="center" vAlign="middle" autoSize="none" text="960" input="true"/>
+    <graph id="n44_8xna" name="n44" xy="110,927" size="119,56" type="rect" fillColor="#ffcccccc"/>
+    <text id="n45_8xna" name="txtCompSizeWidth" xy="115,933" size="110,45" fontSize="25" align="center" vAlign="middle" autoSize="none" text="960" input="true"/>
+    <graph id="n46_8xna" name="n46" xy="240,928" size="119,56" type="rect" fillColor="#ffcccccc"/>
+    <text id="n47_8xna" name="txtCompSizeHeight" xy="245,934" size="110,45" fontSize="25" align="center" vAlign="middle" autoSize="none" text="960" input="true"/>
+    <component id="n48_8xna" name="btnSetPosition" src="ivra2" fileName="Button.xml" xy="378,875" size="144,40">
+      <Button title="设置位置" titleFontSize="25"/>
+    </component>
+    <component id="n49_8xna" name="btnSetCompSize" src="ivra2" fileName="Button.xml" xy="376,939" size="144,40">
+      <Button title="设置大小" titleFontSize="25"/>
+    </component>
+    <component id="n50_8xna" name="btnSetPreviewImage" src="ivra2" fileName="Button.xml" xy="233,1010" size="167,40">
+      <gearDisplay controller="currImage" pages="1"/>
+      <Button title="设置预览图片" titleFontSize="25"/>
+    </component>
+    <component id="n51_8xna" name="btnSetPreviewText" src="ivra2" fileName="Button.xml" xy="515,1001" size="167,40">
+      <gearDisplay controller="currImage" pages="0"/>
+      <Button title="设置预览文字" titleFontSize="25"/>
+    </component>
+    <graph id="n52_8xna" name="n52" xy="124,990" size="384,56" type="rect" fillColor="#ffcccccc">
+      <gearDisplay controller="currImage" pages="0"/>
+    </graph>
+    <text id="n53_8xna" name="txtPreview" xy="124,996" size="375,45" fontSize="25" align="center" vAlign="middle" autoSize="none" text="960" input="true">
+      <gearDisplay controller="currImage" pages="0"/>
+    </text>
+    <component id="n54_8xna" name="btnChangeCurrFolder" src="ivra2" fileName="Button.xml" xy="743,179" size="144,40">
+      <Button title="修改" titleFontSize="25"/>
+    </component>
+    <component id="n55_8xna" name="btnChangeExport" src="ivra2" fileName="Button.xml" xy="743,233" size="144,40">
+      <Button title="修改" titleFontSize="25"/>
+    </component>
+    <graph id="n56_8xna" name="n56" xy="54,536" size="991,219" type="rect" fillColor="#ff999999"/>
+    <graph id="n57_8xna" name="n57" xy="802,321" size="189,200" type="rect" fillColor="#ff999999"/>
+    <component id="n58_8xna" name="btnAddCard" src="ivra2" fileName="Button.xml" xy="824,337" size="144,40">
+      <Button title="增加卡牌" titleFontSize="25"/>
+    </component>
+    <component id="n59_8xna" name="btnRemoveCard" src="ivra2" fileName="Button.xml" xy="823,464" size="144,40">
+      <Button title="删除卡牌" titleFontSize="25"/>
+    </component>
+    <text id="n61_8xna" name="txtCardField" xy="77,461" size="229,45" fontSize="25" align="center" vAlign="middle" autoSize="none" text="960" input="true"/>
+    <component id="n62_8xna" name="btnSetCardField" src="ivra2" fileName="Button.xml" xy="324,461" size="123,40">
+      <Button title="设置字段" titleFontSize="25"/>
+    </component>
+    <list id="n66_8xna" name="lstCardPreview" xy="68,545" size="967,210" layout="row" overflow="scroll" scroll="horizontal" colGap="14" defaultItem="ui://5eon00jx8xna9">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n69_92vb" name="btnSaveWork" src="ivra2" fileName="Button.xml" xy="57,39" size="144,40">
+      <Button title="保存work" titleFontSize="25"/>
+    </component>
+    <component id="n70_92vb" name="btnLoadWork" src="ivra2" fileName="Button.xml" xy="215,39" size="144,40">
+      <Button title="读取work" titleFontSize="25"/>
+    </component>
+    <component id="n71_szka" name="btnDupCard" src="ivra2" fileName="Button.xml" xy="823,400" size="144,40">
+      <Button title="复制卡牌" titleFontSize="25"/>
+    </component>
+    <component id="n72_szka" name="btnDeleteComp" src="ivra2" fileName="Button.xml" xy="608,402" size="118,40">
+      <Button title="删除原件" titleFontSize="25"/>
+    </component>
+  </displayList>
+</component>

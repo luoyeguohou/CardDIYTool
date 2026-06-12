@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	配置文件
+-->
+<config>
+	<client_side output_db="./design.db" no_comment="1">
+		<tableinfo default_key="id" invalid_col="index,default">
+			<file name="item.xlsx">
+				<items  name="道具" firstcol="id" key="id"/>
+				<chests  name="宝箱" firstcol="id" key="id"/>
+			</file>
+			<file name="macro.xlsx">
+				<macros  name="数值宏" firstcol="id" key="id"/>
+				<macros_text  name="文本宏" firstcol="id" key="id"/>
+			</file>
+			<file name="ticket.xlsx">
+				<ticket  name="条件" firstcol="id" key="id"/> 
+			</file>
+			<file name="shop.xlsx">
+				<grocery_shop  name="商铺" firstcol="id" key="id"/> 
+				<extraction_rule  name="抽取规则" firstcol="id" key="id"/> 
+				<equip_lv_shine  name="装备强度映射" firstcol="id" key="id"/>  
+				<field_shop  name="野外商店" firstcol="id" key="id"/> 
+			</file>
+			<file name="heroes.xlsx">
+				<hero  name="英雄" firstcol="id" key="id"/> 
+				<herolv  name="英雄等级" firstcol="level" key="level"/> 
+				<starlv  name="英雄升星" firstcol="stars" key="stars"/>  
+			</file>
+			<file name="equipment.xlsx">
+				<equip name="装备" firstcol="id" key="id"/>
+			</file>
+		</tableinfo>
+	</client_side>
+</config>

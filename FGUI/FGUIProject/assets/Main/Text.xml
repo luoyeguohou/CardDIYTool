@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="650,890">
+  <controller name="preview" pages="0,,1," selected="0"/>
+  <displayList>
+    <graph id="n15_8xna" name="n15" xy="0,0" size="650,890" type="rect" lineSize="0" fillColor="#33ffffff">
+      <gearDisplay controller="preview" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n1_ivra" name="txtCont" xy="0,0" size="650,890" fontSize="29" align="center" vAlign="middle" autoSize="shrink" text="Text">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+</component>

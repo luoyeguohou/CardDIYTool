@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="650,890">
+  <controller name="preview" pages="0,,1," selected="0"/>
+  <displayList>
+    <loader id="n10_8xna" name="image" xy="0,0" size="650,890" fill="scaleFree">
+      <gearDisplay controller="preview" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <graph id="n0_ivra" name="n0" xy="0,0" size="650,890" type="rect" lineSize="14" corner="20">
+      <gearDisplay controller="preview" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n1_ivra" name="n1" xy="253,395" size="144,99" fontSize="76" align="center" vAlign="middle" autoSize="shrink" text="Image">
+      <gearDisplay controller="preview" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

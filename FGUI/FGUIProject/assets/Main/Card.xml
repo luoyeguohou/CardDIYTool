@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="650,890">
+  <controller name="showCtrlButton" pages="0,,1," selected="0"/>
+  <displayList>
+    <graph id="n0_ivra" name="bg" xy="0,0" size="650,890" type="rect" fillColor="#4cffffff">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n1_pul4" name="cont" src="pul4a" fileName="Empty.xml" xy="0,0" size="650,890">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n2_pul4" name="btn1" src="8xna7" fileName="Button(1).xml" xy="7,10" size="20,20">
+      <gearDisplay controller="showCtrlButton" pages="1"/>
+    </component>
+    <component id="n3_pul4" name="btn2" src="8xna7" fileName="Button(1).xml" xy="13,51" size="20,20">
+      <gearDisplay controller="showCtrlButton" pages="1"/>
+    </component>
+    <component id="n4_pul4" name="btn3" src="8xna7" fileName="Button(1).xml" xy="62,8" size="20,20">
+      <gearDisplay controller="showCtrlButton" pages="1"/>
+    </component>
+    <component id="n5_pul4" name="btn4" src="8xna7" fileName="Button(1).xml" xy="60,52" size="20,20">
+      <gearDisplay controller="showCtrlButton" pages="1"/>
+    </component>
+  </displayList>
+</component>

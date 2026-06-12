@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<config>
+    <!-- 加密密码 -->
+    <password>XJaA1@#2</password>
+    <!-- 需要加密文件 -->
+    <input_fn>./data/design.json</input_fn>
+    <!-- 输出文件名 -->
+    <output_fn>./data/design.txt</output_fn>
+    <!-- 是否检测 -->
+    <check>0</check>
+    <!-- 检测文件名 -->
+    <check_output_fn>check_output</check_output_fn>
+</config>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!-- ddb file path -->
+	<ddb>./data/design.db</ddb>
+	<!-- output json file path -->
+	<output>./design.json</output>
+	<!-- encode pretty for read -->
+	<EnablePretty>1</EnablePretty>
+	<tables>
+		<!-- chinese.xlsx -->
+		<table name="chineseCard">*</table>
+		<table name="chineseBook">*</table>
+		<table name="chineseExhibit">*</table>
+		<table name="chineseActionSpace">*</table>
+		<table name="chineseBuff">*</table>
+		<table name="chineseStaticText">*</table>
+		<table name="chineseNegativeBuff">*</table>
+		<!-- data.xlsx -->
+		<table name="dataCard">*</table>
+		<table name="dataBook">*</table>
+		<table name="dataExhibit">*</table>
+		<table name="dataActionSpace">*</table>
+		<table name="dataBuff">*</table>
+		<table name="dataPlaceholder">*</table>
+		<table name="dataNegativeBuff">*</table>
+		<!-- english.xlsx -->
+		<table name="englishCard">*</table>
+		<table name="englishBook">*</table>
+		<table name="englishExhibit">*</table>
+		<table name="englishActionSpace">*</table>
+		<table name="englishBuff">*</table>
+		<table name="englishStaticText">*</table>
+		<table name="englishNegativeBuff">*</table>
+	</tables>
+</config>
