@@ -7,12 +7,13 @@
     <component id="ivra3" name="Card.xml" path="/"/>
     <component id="ivra4" name="Image.xml" path="/" exported="true"/>
     <component id="ivra6" name="Text.xml" path="/" exported="true"/>
-    <component id="8xna7" name="Button(1).xml" path="/"/>
+    <component id="8xna7" name="Button_1.xml" path="/"/>
     <component id="8xna8" name="MainWin.xml" path="/" exported="true"/>
     <component id="8xna9" name="CardPreview.xml" path="/" exported="true"/>
     <component id="pul4a" name="Empty.xml" path="/"/>
     <component id="ptwpb" name="Component1.xml" path="/"/>
     <image id="ptwpc" name="unnamed.jpg" path="/"/>
+    <component id="u1ucd" name="Button_2.xml" path="/"/>
   </resources>
   <publish name="" genCode="true"/>
 </packageDescription>

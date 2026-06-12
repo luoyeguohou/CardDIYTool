@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080">
   <controller name="currImage" pages="0,,1," selected="0"/>
+  <controller name="useFixedExportSize" pages="0,,1," selected="0"/>
   <displayList>
     <graph id="n29_8xna" name="n29" xy="53,374" size="704,152" type="rect" fillColor="#ff999999"/>
     <graph id="n36_8xna" name="n36" xy="66,771" size="929,296" type="rect" fillColor="#ff999999"/>
@@ -14,7 +15,6 @@
     <component id="n6_ivra" name="btnAddText" src="ivra2" fileName="Button.xml" xy="471,459" size="118,40">
       <Button title="增加文本" titleFontSize="25"/>
     </component>
-    <component id="n17_ivra" name="card" src="ivra3" fileName="Card.xml" xy="1125,19" size="600,960"/>
     <component id="n18_ivra" name="btnLayerUp" src="ivra2" fileName="Button.xml" xy="642,783" size="144,40">
       <Button title="层级向上" titleFontSize="25"/>
     </component>
@@ -28,7 +28,7 @@
       <Button title="选择json" titleFontSize="25"/>
     </component>
     <text id="n27_8xna" name="txtJson" xy="209,104" size="518,52" fontSize="25" vAlign="middle" autoSize="shrink" text="C://Programx86/test/shdjsakgfksagkfasgfs"/>
-    <component id="n28_8xna" name="btnDraw" src="ivra2" fileName="Button.xml" xy="247,290" size="365,68">
+    <component id="n28_8xna" name="btnDraw" src="ivra2" fileName="Button.xml" xy="434,291" size="365,68">
       <Button title="开始绘制" titleFontSize="42"/>
     </component>
     <component id="n30_8xna" name="btnSetSize" src="ivra2" fileName="Button.xml" xy="325,403" size="123,40">
@@ -111,6 +111,20 @@
     </component>
     <component id="n72_szka" name="btnDeleteComp" src="ivra2" fileName="Button.xml" xy="608,402" size="118,40">
       <Button title="删除原件" titleFontSize="25"/>
+    </component>
+    <loader id="n73_py4w" name="card" xy="1150,50" size="641,984" url="ui://5eon00jxivra3" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <graph id="n74_u1uc" name="n74" xy="3,301" size="119,56" type="rect" fillColor="#ffcccccc"/>
+    <text id="n75_u1uc" name="txtExportSizeWidth" xy="8,306" size="110,45" fontSize="25" align="center" vAlign="middle" autoSize="none" text="960" input="true"/>
+    <graph id="n76_u1uc" name="n76" xy="129,302" size="119,56" type="rect" fillColor="#ffcccccc"/>
+    <text id="n77_u1uc" name="txtExportSizeHeight" xy="134,307" size="110,45" fontSize="25" align="center" vAlign="middle" autoSize="none" text="960" input="true"/>
+    <text id="n80_u1uc" name="n80" xy="252,295" size="166,67" fontSize="18" vAlign="middle" autoSize="none" text="使用固定尺寸："/>
+    <component id="n78_u1uc" name="n78" src="u1ucd" fileName="Button(2).xml" xy="372,313" controller="fixed,1">
+      <gearDisplay controller="useFixedExportSize" pages="1"/>
+      <Button controller="useFixedExportSize" page="0"/>
+    </component>
+    <component id="n79_u1uc" name="n79" src="u1ucd" fileName="Button(2).xml" xy="372,313" controller="fixed,0">
+      <gearDisplay controller="useFixedExportSize" pages="0"/>
+      <Button controller="useFixedExportSize" page="1"/>
     </component>
   </displayList>
 </component>

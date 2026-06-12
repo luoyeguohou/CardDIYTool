@@ -13,6 +13,7 @@ namespace Main
             UIObjectFactory.SetPackageItemExtension(UI_Card.URL, typeof(UI_Card));
             UIObjectFactory.SetPackageItemExtension(UI_Image.URL, typeof(UI_Image));
             UIObjectFactory.SetPackageItemExtension(UI_Text.URL, typeof(UI_Text));
+            UIObjectFactory.SetPackageItemExtension(UI_Button_2.URL, typeof(UI_Button_2));
             UIObjectFactory.SetPackageItemExtension(UI_Main.URL, typeof(UI_Main));
         }
     }

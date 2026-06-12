@@ -3,13 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using FairyGUI;
 using System.CodeDom;
+using System;
 namespace Main
 {
     public partial class UI_Card : GComponent
     {
         private readonly List<GComponent> comps = new List<GComponent>();
+        private static ObjectPool<GComponent> _imgPool;
+        private static ObjectPool<GComponent> _textPool;
+        private static ObjectPool<GComponent> imgPool
+        {
+            get
+            {
+                if (_imgPool == null)
+                    _imgPool = new ObjectPool<GComponent>(
+                        () => UIPackage.CreateObject("Main", "Image").asCom
+                        , (GComponent g) => g.visible = true,
+                        (GComponent g) => g.visible = false
+                        );
+                return _imgPool;
+            }
+        }
+        private static ObjectPool<GComponent> textPool
+        {
+            get
+            {
+                if (_textPool == null)
+                    _textPool = new ObjectPool<GComponent>(
+                        () => UIPackage.CreateObject("Main", "Text").asCom
+                        , (GComponent g) => g.visible = true,
+                        (GComponent g) => g.visible = false);
+                return _textPool;
+            }
+        }
 
         private Card c;
+        private bool justPreview;
 
         public override void ConstructFromResource()
         {
@@ -23,35 +52,52 @@ namespace Main
             m_btn2.onDragEnd.Add(OnDragEnd2);
             m_btn3.onDragEnd.Add(OnDragEnd3);
             m_btn4.onDragEnd.Add(OnDragEnd4);
+            Msg.Bind(MsgID.OnCardChanged, OnCardChanged);
         }
 
-        // 小图/大图导出   不显示拖拽按钮 不显示文字背景
-        // 大图编辑     
-        public void SetCard(Card c, bool justPreview = false)
+        public override void Dispose()
         {
-            this.c = c;
+            base.Dispose();
+            Msg.UnBind(MsgID.OnCardChanged, OnCardChanged);
+        }
+
+        private void OnCardChanged(object[] p =null) {
+            Card c = (Card)p[0];
+            if (c != this.c) return;
+            // todo update view
+        }
+
+        private void InitView() 
+        { 
+        
+        }
+
+        private void UpdateView() 
+        {
             width = c.width;
             height = c.height;
-            m_btn1.dragBounds = TransformRect(new Rect(0, 0, width, height), GRoot.inst);
-            m_btn2.dragBounds = TransformRect(new Rect(0, 0, width, height), GRoot.inst);
-            m_btn3.dragBounds = TransformRect(new Rect(0, 0, width, height), GRoot.inst);
-            m_btn4.dragBounds = TransformRect(new Rect(0, 0, width, height), GRoot.inst);
+
             foreach (var item in comps)
             {
-                item.Dispose();
+                if (item.GetType() == typeof(UI_Image))
+                    imgPool.Release(item);
+                else
+                    textPool.Release(item);
             }
             comps.Clear();
             foreach (var item in c.comps)
             {
-                GComponent ui = UIPackage.CreateObject("Main", item.type == CompType.Image ? "Image" : "Text").asCom;
+                GComponent ui = (item.type == CompType.Image ? imgPool : textPool).Get();
                 m_cont.AddChild(ui);
                 ui.SetXY(item.x, item.y);
                 ui.width = item.width;
                 ui.height = item.height;
+                ui.onClick.Clear();
                 ui.onClick.Add(() => OnClickComp(c, item));
                 comps.Add(ui);
                 ui.draggable = true;
                 ui.dragBounds = TransformRect(new Rect(0, 0, width, height), GRoot.inst);
+                ui.onDragEnd.Clear();
                 ui.onDragEnd.Add(() => OnDragEndComp(item, ui));
 
                 if (item.type == CompType.Image)
@@ -75,10 +121,23 @@ namespace Main
             }
         }
 
+        // 小图/大图导出   不显示拖拽按钮 不显示文字背景
+        // 大图编辑     
+        public void SetCard(Card c, bool justPreview = false)
+        {
+            this.c = c;
+            this.justPreview = justPreview;
+            m_btn1.dragBounds = TransformRect(new Rect(0, 0, width, height), GRoot.inst);
+            m_btn2.dragBounds = TransformRect(new Rect(0, 0, width, height), GRoot.inst);
+            m_btn3.dragBounds = TransformRect(new Rect(0, 0, width, height), GRoot.inst);
+            m_btn4.dragBounds = TransformRect(new Rect(0, 0, width, height), GRoot.inst);
+            UpdateView();
+        }
+
         private void OnClickComp(Card c, Comp comp)
         {
             c.selectedIndex = c.comps.IndexOf(comp);
-            UIManager.GetType<UI_MainWin>().UpdateView();
+            Msg.Dispatch(MsgID.OnCardChanged,new object[1]{c });
         }
 
         private void OnDragEndComp(Comp c, GComponent ui)
@@ -131,7 +190,9 @@ namespace Main
             comp.y = (int)ui.y;
             comp.width = (int)ui.width;
             comp.height = (int)ui.height;
-            UIManager.GetType<UI_MainWin>().UpdateView();
+            // todo
+            //UIManager.GetType<UI_MainWin>().UpdateView();
+            UpdateView();
         }
     }
 }

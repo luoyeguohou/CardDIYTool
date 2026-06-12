@@ -21,7 +21,8 @@ public class ScreenshotTool : MonoBehaviour
 
     IEnumerator CaptureCoroutine(string name, Card c)
     {
-        UIManager.GetType<UI_MainWin>().m_cont.m_card.SetCard(c,true);
+        UI_Card cardUI = UIManager.GetType<UI_MainWin>().m_cont.m_card.component as UI_Card;
+        cardUI.SetCard(c,true);
         // 等待当前帧渲染完成（非常关键）
         yield return new WaitForEndOfFrame();
 

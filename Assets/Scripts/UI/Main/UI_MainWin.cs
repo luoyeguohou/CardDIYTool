@@ -7,7 +7,7 @@ namespace Main
 {
     public partial class UI_MainWin : FairyWindow
     {
-        public GImage m_bg;
+        public GGraph m_bg;
         public UI_Main m_cont;
         public const string URL = "ui://5eon00jx8xna8";
 
@@ -20,7 +20,7 @@ namespace Main
         {
             base.ConstructFromXML(xml);
 
-            m_bg = (GImage)GetChildAt(0);
+            m_bg = (GGraph)GetChildAt(0);
             m_cont = (UI_Main)GetChildAt(1);
         }
     }
